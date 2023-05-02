@@ -1,0 +1,24 @@
+--create Dog Supply Store Database.
+
+CREATE TABLE pupper_store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, category TEXT, price INTEGER);
+INSERT INTO pupper_store VALUES (1, "kibble", 50, "food", 50);
+INSERT INTO pupper_Store VALUES (2, "wet food", 100, "food", 15);
+INSERT INTO pupper_store VALUES (3, "collar", 15, "gear", 30);
+INSERT INTO pupper_store VALUES (4, "leash", 20, "gear", 20);
+INSERT INTO pupper_store VALUES (5, "treats", 50, "food", 10);
+INSERT INTO pupper_store VALUES (6, "food dish", 10, "accessories", 10);
+INSERT INTO pupper_store VALUES (7, "water bowl", 10, "accessories", 10);
+INSERT INTO pupper_store VALUES (8, "hoodie", 5, "clothes", 60);
+INSERT INTO pupper_store VALUES (9, "shoes", 5, "clothes", 50);
+INSERT INTO pupper_store VALUES (10, "dog bed", 10, "accessories", 100);
+INSERT INTO pupper_store VALUES (11, "blanket", 10, "accessories", 10);
+INSERT INTO pupper_store VALUES (12, "rope toy", 5, "toys", 10);
+INSERT INTO pupper_store VALUES (13, "chew toy", 5, "toys", 10);
+INSERT INTO pupper_store VALUES (14, "harness", 10, "gear", 25);
+INSERT INTO pupper_store VALUES (15, "crate", 5, "accessories", 100);
+
+--display the database ordered by price.
+SELECT * FROM pupper_store ORDER BY price;
+
+--display average price by category.
+SELECT category, AVG(price) FROM pupper_store GROUP BY category;
