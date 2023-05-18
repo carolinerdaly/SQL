@@ -260,5 +260,8 @@ SELECT college, COUNT(*) as school_total FROM picks
     SELECT name, college, picked_by, pick_number
     FROM picks
     WHERE pick_number <=20 OR college = "Alabama";
-    
-    
+   
+    SELECT college, AVG(pick_number)
+    FROM picks
+    GROUP BY college
+    ORDER BY AVG(pick_number) ASC;
